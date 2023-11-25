@@ -13,7 +13,7 @@ import tensorflow as tf
 
 #NUM_GPUS = 2
 #strategy = tf.contrib.distribute.MirroredStrategy()#num_gpus=NUM_GPUS)
-# not working
+# working on dual RTX-4090
 strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0", "/gpu:1"])
 #WARNING:tensorflow:Some requested devices in `tf.distribute.Strategy` are not visible to TensorFlow: /replica:0/task:0/device:GPU:1,/replica:0/task:0/device:GPU:0
 #Number of devices: 2
@@ -47,23 +47,18 @@ strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0", "/gpu:1"])
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 
-#with strategy.scope():
-
+with strategy.scope():
 # https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50
 # https://keras.io/api/models/model/
-parallel_model = tf.keras.applications.ResNet50(
+  parallel_model = tf.keras.applications.ResNet50(
+#model = tf.keras.applications.ResNet50(
     include_top=True,
     weights=None,
     input_shape=(32, 32, 3),
     classes=100,)
 # https://saturncloud.io/blog/how-to-do-multigpu-training-with-keras/  
-#parallel_model = multi_gpu_model(model, gpus=2)
-#from tensorflow.python.keras import backend as K
-#tf.keras.set_session(session)
-
-
-loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
+  #parallel_model = multi_gpu_model(model, gpus=2)
+  loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 # https://keras.io/api/models/model_training_apis/
-parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
-
-parallel_model.fit(x_train, y_train, epochs=40, batch_size=5120)#7168)#7168)
+  parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
+parallel_model.fit(x_train, y_train, epochs=10, batch_size=256)#5120)#7168)#7168)
