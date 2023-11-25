@@ -28,7 +28,6 @@ Epoch 1/40
 Epoch 2/40
 196/196 [==============================] - 9s 48ms/step - loss: 3.8850 - accuracy: 0.1505
 
-5806
 
 50% load, 9%
 4.02
@@ -39,7 +38,7 @@ Epoch 40/40
 98/98 [==============================] - 5s 53ms/step - loss: 0.1610 - accuracy: 0.9656
 
 60% load,15% ram
-1.35
+2.35
 parallel_model.fit(x_train, y_train, epochs=40, batch_size=1024)#7168)
 Epoch 39/40
 49/49 [==============================] - 3s 57ms/step - loss: 0.2216 - accuracy: 0.9517
