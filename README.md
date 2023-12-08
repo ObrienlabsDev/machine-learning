@@ -212,3 +212,63 @@ Epoch 30/30
 (base) michael@l4-4-2:~/machine-learning$ 
 ```
 <img width="898" alt="Screenshot 2023-11-30 at 15 31 16" src="https://github.com/GoogleCloudPlatform/pubsec-declarative-toolkit/assets/24765473/ba065148-45ec-40de-a532-72644193c41a">
+
+
+## GPU: Dual RTX-A4500 Ampere without NVLink in Z790H 64G i9-14900K
+### Power:
+### Temp:
+- liquid temp
+- CPU temp 
+- RAM temp outside
+- Board power cap outside
+- 
+### Code
+```
+```
+### Results
+```
+```
+
+## GPU: Dual RTX-A4500 Ampere with NVLink in Z790H 64G i9-14900K
+## CPU: Z790H 64G i9-14900K
+### Power:
+### Temp:
+- liquid temp = 38
+- CPU temp = 71-76
+- RAM temp outside
+- Board power cap outside
+- 
+![image](https://github.com/ObrienlabsDev/machine-learning/assets/24765473/de59179c-95b0-40cb-afa3-c7a05eb86d3a)
+
+## GPU: Dual RTX-4090 Suprim Liquid X Ada without NVLink in Z790H 192G i9-13900K
+### Power:
+### Temp:
+- liquid temp
+- CPU temp 
+- RAM temp outside
+- Board power cap outside
+- 
+### Code
+```
+```
+### Results
+```
+```
+
+## CPU: Z790H 192G i9-13900K
+### Power:
+### Temp:
+- liquid temp
+- CPU temp 
+- RAM temp outside
+- Board power cap outside
+- 
+### Code
+```
+```
+### Results
+```
+```
+
+
+
