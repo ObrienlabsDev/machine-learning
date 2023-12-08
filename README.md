@@ -237,8 +237,69 @@ Epoch 30/30
 - CPU temp = 71-76
 - RAM temp outside
 - Board power cap outside
-- 
+- CPU wsl2 96-99%
 ![image](https://github.com/ObrienlabsDev/machine-learning/assets/24765473/de59179c-95b0-40cb-afa3-c7a05eb86d3a)
+
+### Code
+```
+strategy = tf.distribute.OneDeviceStrategy("/cpu:0")
+parallel_model.fit(x_train, y_train, epochs=25, batch_size=256)
+
+```
+### Results
+```
+196/196 [==============================] - 61s 285ms/step - loss: 4.3420 - accuracy: 0.0941
+Epoch 2/25
+196/196 [==============================] - 55s 281ms/step - loss: 3.6117 - accuracy: 0.1755
+Epoch 3/25
+2023-12-08 21:15:54.565643: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 55s 281ms/step - loss: 3.3433 - accuracy: 0.2257
+Epoch 4/25
+196/196 [==============================] - 55s 281ms/step - loss: 3.3183 - accuracy: 0.2407
+Epoch 5/25
+196/196 [==============================] - 56s 283ms/step - loss: 2.8984 - accuracy: 0.2995
+Epoch 6/25
+196/196 [==============================] - 57s 291ms/step - loss: 2.7675 - accuracy: 0.3311
+Epoch 7/25
+196/196 [==============================] - 56s 286ms/step - loss: 3.0207 - accuracy: 0.3210
+Epoch 8/25
+196/196 [==============================] - 56s 288ms/step - loss: 3.9374 - accuracy: 0.1562
+Epoch 9/25
+196/196 [==============================] - 57s 289ms/step - loss: 3.5116 - accuracy: 0.1987
+Epoch 10/25
+196/196 [==============================] - 57s 290ms/step - loss: 3.0358 - accuracy: 0.2711
+Epoch 11/25
+196/196 [==============================] - 57s 292ms/step - loss: 2.8239 - accuracy: 0.3067
+Epoch 12/25
+196/196 [==============================] - 57s 291ms/step - loss: 2.6456 - accuracy: 0.3391
+Epoch 13/25
+196/196 [==============================] - 55s 281ms/step - loss: 2.5414 - accuracy: 0.3609
+Epoch 14/25
+196/196 [==============================] - 54s 278ms/step - loss: 2.3249 - accuracy: 0.4089
+Epoch 15/25
+196/196 [==============================] - 55s 279ms/step - loss: 2.1558 - accuracy: 0.4413
+Epoch 16/25
+196/196 [==============================] - 54s 277ms/step - loss: 2.0078 - accuracy: 0.4763
+Epoch 17/25
+196/196 [==============================] - 54s 276ms/step - loss: 1.8048 - accuracy: 0.5175
+Epoch 18/25
+196/196 [==============================] - 56s 288ms/step - loss: 1.6319 - accuracy: 0.5605
+Epoch 19/25
+196/196 [==============================] - 55s 283ms/step - loss: 1.4296 - accuracy: 0.6122
+Epoch 20/25
+196/196 [==============================] - 55s 278ms/step - loss: 1.2125 - accuracy: 0.6641
+Epoch 21/25
+196/196 [==============================] - 54s 277ms/step - loss: 1.0231 - accuracy: 0.7140
+Epoch 22/25
+196/196 [==============================] - 54s 278ms/step - loss: 0.9759 - accuracy: 0.7312
+Epoch 23/25
+196/196 [==============================] - 54s 278ms/step - loss: 1.1977 - accuracy: 0.6877
+Epoch 24/25
+196/196 [==============================] - 54s 278ms/step - loss: 1.1991 - accuracy: 0.6801
+Epoch 25/25
+196/196 [==============================] - 55s 279ms/step - loss: 0.6931 - accuracy: 0.8060
+
+```
 
 ## GPU: Dual RTX-4090 Suprim Liquid X Ada without NVLink in Z790H 192G i9-13900K
 ### Power:
