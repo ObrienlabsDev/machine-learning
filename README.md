@@ -233,9 +233,11 @@ Epoch 30/30
 ## CPU: Z790H 64G i9-14900K
 ### Power:
 ### Temp:
+- PSU power in-internal: 350W-470W peak
 - liquid temp = 38
 - CPU temp = 71-76
 - RAM temp outside
+- RAM temp software: 61C
 - Board power cap outside
 - CPU wsl2 96-99%
 ![image](https://github.com/ObrienlabsDev/machine-learning/assets/24765473/de59179c-95b0-40cb-afa3-c7a05eb86d3a)
