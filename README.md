@@ -301,6 +301,85 @@ Epoch 24/25
 Epoch 25/25
 196/196 [==============================] - 55s 279ms/step - loss: 0.6931 - accuracy: 0.8060
 
+
+run 2
+14900c dual 4500
+560 cpu batch 256 84-93% wsl 51c ram 100 cpu 14G ram 36%
+150-200 idle
+315-700w  dual gpu batch 3072
+
+
+
+2048 gpu
+.113*25*25 = 71 sec for .93 accuracy (5% of CPU time = 21x faster or 10x faster per gpu
+Epoch 22/25
+25/25 [==============================] - 3s 111ms/step - loss: 0.2104 - accuracy: 0.9411
+Epoch 23/25
+25/25 [==============================] - 3s 114ms/step - loss: 0.2733 - accuracy: 0.9259
+Epoch 24/25
+25/25 [==============================] - 3s 113ms/step - loss: 0.3863 - accuracy: 0.8852
+Epoch 25/25
+25/25 [==============================] - 3s 113ms/step - loss: 0.2842 - accuracy: 0.9235
+
+
+
+256 cpu
+.297*196*25 = 1455 sec for .91 accuracy = 10x slower than 1 gpu
+or this stream.
+  1/196 [..............................] - ETA: 20:06 - loss: 6.9762 - accuracy: 0.00392023-12-10 00:56:34.991344: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+  3/196 [..............................] - ETA: 1:00 - loss: 6.9847 - accuracy: 0.00262023-12-10 00:56:35.610671: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+  7/196 [>.............................] - ETA: 58s - loss: 6.6585 - accuracy: 0.00892023-12-10 00:56:36.824655: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+ 45/196 [=====>........................] - ETA: 45s - loss: 5.1467 - accuracy: 0.03082023-12-10 00:56:48.318008: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+148/196 [=====================>........] - ETA: 14s - loss: 4.4486 - accuracy: 0.07882023-12-10 00:57:19.211928: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 65s 300ms/step - loss: 4.2915 - accuracy: 0.0933
+Epoch 2/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.8266 - accuracy: 0.1585
+Epoch 3/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.4660 - accuracy: 0.2013
+Epoch 4/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.4054 - accuracy: 0.2327
+Epoch 5/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.5802 - accuracy: 0.2298
+Epoch 6/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.4940 - accuracy: 0.2211
+Epoch 7/25
+196/196 [==============================] - 58s 297ms/step - loss: 3.0766 - accuracy: 0.2664
+Epoch 8/25
+196/196 [==============================] - 58s 297ms/step - loss: 2.7800 - accuracy: 0.3180
+Epoch 9/25
+196/196 [==============================] - 58s 297ms/step - loss: 2.5303 - accuracy: 0.3673
+Epoch 10/25
+196/196 [==============================] - 58s 297ms/step - loss: 2.3552 - accuracy: 0.4081
+Epoch 11/25
+196/196 [==============================] - 58s 297ms/step - loss: 2.5569 - accuracy: 0.3798
+Epoch 12/25
+196/196 [==============================] - 58s 298ms/step - loss: 2.9079 - accuracy: 0.3195
+Epoch 13/25
+196/196 [==============================] - 58s 298ms/step - loss: 2.6752 - accuracy: 0.3728
+Epoch 14/25
+196/196 [==============================] - 58s 298ms/step - loss: 2.6649 - accuracy: 0.3469
+Epoch 15/25
+196/196 [==============================] - 59s 300ms/step - loss: 2.1321 - accuracy: 0.4490
+Epoch 16/25
+196/196 [==============================] - 59s 299ms/step - loss: 2.0236 - accuracy: 0.4809
+Epoch 17/25
+196/196 [==============================] - 58s 295ms/step - loss: 1.7347 - accuracy: 0.5369
+Epoch 18/25
+196/196 [==============================] - 58s 295ms/step - loss: 1.4486 - accuracy: 0.6083
+Epoch 19/25
+196/196 [==============================] - 58s 295ms/step - loss: 1.1899 - accuracy: 0.6774
+Epoch 20/25
+196/196 [==============================] - 58s 294ms/step - loss: 0.9406 - accuracy: 0.7405
+Epoch 21/25
+196/196 [==============================] - 58s 296ms/step - loss: 0.7380 - accuracy: 0.7938
+Epoch 22/25
+196/196 [==============================] - 58s 294ms/step - loss: 0.6913 - accuracy: 0.8110
+Epoch 23/25
+196/196 [==============================] - 57s 293ms/step - loss: 0.4984 - accuracy: 0.8693
+Epoch 24/25
+196/196 [==============================] - 58s 294ms/step - loss: 0.4505 - accuracy: 0.8840
+Epoch 25/25
+196/196 [==============================] - 58s 294ms/step - loss: 0.3783 - accuracy: 0.9050
 ```
 
 ## GPU: Dual RTX-4090 Suprim Liquid X Ada without NVLink in Z790H 192G i9-13900K
