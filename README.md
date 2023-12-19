@@ -539,6 +539,28 @@ Epoch 24/25
 17/17 [==============================] - 5s 303ms/step - loss: 0.5549 - accuracy: 0.8422
 Epoch 25/25
 17/17 [==============================] - 5s 302ms/step - loss: 0.4353 - accuracy: 0.8797
+
+
+
+13900a xmp II
+
+2023-12-19 23:18:44.676359: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+  2/196 [..............................] - ETA: 59s - loss: 6.3865 - accuracy: 0.0156  2023-12-19 23:18:45.711966: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+  3/196 [..............................] - ETA: 57s - loss: 6.4258 - accuracy: 0.01692023-12-19 23:18:46.003668: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 62s 288ms/step - loss: 4.2650 - accuracy: 0.0907
+Epoch 2/25
+ 72/196 [==========>...................] - ETA: 35s - loss: 3.8604 - accuracy: 0.13662023-12-19 23:20:02.130417: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 56s 284ms/step - loss: 3.7666 - accuracy: 0.1615
+Epoch 3/25
+196/196 [==============================] - 56s 284ms/step - loss: 4.1555 - accuracy: 0.1498
+Epoch 4/25
+196/196 [==============================] - 57s 289ms/step - loss: 3.9914 - accuracy: 0.1148
+Epoch 5/25
+196/196 [==============================] - 57s 290ms/step - loss: 3.5812 - accuracy: 0.1741
+Epoch 6/25
+196/196 [==============================] - 56s 288ms/step - loss: 3.2962 - accuracy: 0.2201
+Epoch 7/25
+196/196 [==============================] - 56s 286ms/step - loss: 3.2700 - accuracy: 0.2192
 ```
 
 
