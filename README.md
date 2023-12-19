@@ -412,5 +412,133 @@ Epoch 25/25
 ```
 ```
 
+# Comparisons
+
+```
+
+cpu 64484 ms 13900k auto
+cpu 54488 ms 14900k xmpIIt = 1.19
+gpu 5066 ms rtx-4000 3072 (auto) 12.7
+gpu 3770 ms single rtx-4500 4096 (xmpIIt) 1.34 14.45
+gpu 2379 ms dual rtx-4500 4096 (xmpIIt) 2.13 1.58 22.9
+
+xmp1 13900b
+
+  1/196 [..............................] - ETA: 19:33 - loss: 6.2215 - accuracy: 0.00392023-12-17 16:47:57.141700: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+2023-12-17 16:47:57.187032: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+  2/196 [..............................] - ETA: 59s - loss: 6.4643 - accuracy: 0.0078  2023-12-17 16:47:57.439043: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+177/196 [==========================>...] - ETA: 5s - loss: 4.2576 - accuracy: 0.09162023-12-17 16:48:47.376423: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 62s 285ms/step - loss: 4.2148 - accuracy: 0.0968
+Epoch 2/25
+ 16/196 [=>............................] - ETA: 51s - loss: 3.7675 - accuracy: 0.15452023-12-17 16:48:57.384228: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 56s 284ms/step - loss: 3.5792 - accuracy: 0.1858
+Epoch 3/25
+196/196 [==============================] - 56s 284ms/step - loss: 3.6221 - accuracy: 0.1762
+Epoch 4/25
+196/196 [==============================] - 56s 285ms/step - loss: 3.5754 - accuracy: 0.2086
+Epoch 5/25
+  2/196 [..............................] - ETA: 56s - loss: 4.0169 - accuracy: 0.1211(base)
+
+
+back to auto
+
+  7/196 [>.............................] - ETA: 1:04 - loss: 6.3731 - accuracy: 0.01282023-12-17 17:10:04.059541: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+ 16/196 [=>............................] - ETA: 1:00 - loss: 5.6742 - accuracy: 0.01812023-12-17 17:10:07.167167: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 71s 333ms/step - loss: 4.2207 - accuracy: 0.0907
+Epoch 2/25
+196/196 [==============================] - 65s 330ms/step - loss: 3.8126 - accuracy: 0.1411
+Epoch 3/25
+ 92/196 [=============>................] - ETA: 34s - loss: 3.8442 - accuracy: 0.18802023-12-17 17:12:42.006779: E external/local_xla/xla/stream_executor/stream_executor_internal.h:177] SetPriority unimplemented for this stream.
+196/196 [==============================] - 64s 329ms/step - loss: 4.1021 - accuracy: 0.1498
+Epoch 4/25
+196/196 [==============================] - 65s 332ms/step - loss: 3.5662 - accuracy: 0.1792
+Epoch 5/25
+196/196 [==============================] - 66s 338ms/step - loss: 3.2549 - accuracy: 0.2290
+Epoch 6/25
+196/196 [==============================] - 65s 333ms/step - loss: 3.1233 - accuracy: 0.2542
+Epoch 7/25
+196/196 [==============================] - 65s 333ms/step - loss: 2.8770 - accuracy: 0.2963
+Epoch 8/25
+196/196 [==============================] - 65s 332ms/step - loss: 2.7122 - accuracy: 0.3323
+Epoch 9/25
+196/196 [==============================] - 65s 332ms/step - loss: 2.7316 - accuracy: 0.3258
+Epoch 10/25
+196/196 [==============================] - 65s 333ms/step - loss: 2.4714 - accuracy: 0.3781
+Epoch 11/25
+196/196 [==============================] - 66s 336ms/step - loss: 2.4632 - accuracy: 0.3895
+Epoch 12/25
+196/196 [==============================] - 65s 332ms/step - loss: 2.4943 - accuracy: 0.3731
+Epoch 13/25
+196/196 [==============================] - 65s 330ms/step - loss: 2.1627 - accuracy: 0.4440
+Epoch 14/25
+196/196 [==============================] - 65s 332ms/step - loss: 2.8412 - accuracy: 0.3587
+Epoch 15/25
+196/196 [==============================] - 64s 329ms/step - loss: 2.7271 - accuracy: 0.3317
+Epoch 16/25
+196/196 [==============================] - 65s 331ms/step - loss: 2.2484 - accuracy: 0.4295
+Epoch 17/25
+196/196 [==============================] - 65s 331ms/step - loss: 2.0061 - accuracy: 0.4812
+Epoch 18/25
+196/196 [==============================] - 65s 331ms/step - loss: 2.0881 - accuracy: 0.4815
+Epoch 19/25
+196/196 [==============================] - 65s 333ms/step - loss: 1.6362 - accuracy: 0.5683
+Epoch 20/25
+196/196 [==============================] - 65s 334ms/step - loss: 1.3457 - accuracy: 0.6347
+
+gpu 4000 with 3072 25
+
+TORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1702834440.315323      97 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+17/17 [==============================] - 45s 805ms/step - loss: 5.0761 - accuracy: 0.0332
+Epoch 2/25
+17/17 [==============================] - 5s 294ms/step - loss: 4.0471 - accuracy: 0.0870
+Epoch 3/25
+17/17 [==============================] - 5s 296ms/step - loss: 3.6452 - accuracy: 0.1473
+Epoch 4/25
+17/17 [==============================] - 5s 297ms/step - loss: 3.4603 - accuracy: 0.1816
+Epoch 5/25
+17/17 [==============================] - 5s 297ms/step - loss: 3.0679 - accuracy: 0.2515
+Epoch 6/25
+17/17 [==============================] - 5s 297ms/step - loss: 2.6895 - accuracy: 0.3285
+Epoch 7/25
+17/17 [==============================] - 5s 299ms/step - loss: 2.3169 - accuracy: 0.4071
+Epoch 8/25
+17/17 [==============================] - 5s 299ms/step - loss: 1.9836 - accuracy: 0.4794
+Epoch 9/25
+17/17 [==============================] - 5s 300ms/step - loss: 1.6977 - accuracy: 0.5458
+Epoch 10/25
+17/17 [==============================] - 5s 299ms/step - loss: 1.4570 - accuracy: 0.6020
+Epoch 11/25
+17/17 [==============================] - 5s 300ms/step - loss: 1.2364 - accuracy: 0.6573
+Epoch 12/25
+17/17 [==============================] - 5s 300ms/step - loss: 3.7002 - accuracy: 0.2081
+Epoch 13/25
+17/17 [==============================] - 5s 299ms/step - loss: 3.1458 - accuracy: 0.2441
+Epoch 14/25
+17/17 [==============================] - 5s 300ms/step - loss: 2.8122 - accuracy: 0.3136
+Epoch 15/25
+17/17 [==============================] - 5s 301ms/step - loss: 2.5327 - accuracy: 0.3639
+Epoch 16/25
+17/17 [==============================] - 5s 301ms/step - loss: 2.2787 - accuracy: 0.4216
+Epoch 17/25
+17/17 [==============================] - 5s 300ms/step - loss: 2.0286 - accuracy: 0.4742
+Epoch 18/25
+17/17 [==============================] - 5s 301ms/step - loss: 1.5872 - accuracy: 0.5715
+Epoch 19/25
+17/17 [==============================] - 5s 302ms/step - loss: 1.5890 - accuracy: 0.5795
+Epoch 20/25
+17/17 [==============================] - 5s 303ms/step - loss: 1.1264 - accuracy: 0.6885
+Epoch 21/25
+17/17 [==============================] - 5s 302ms/step - loss: 0.7854 - accuracy: 0.7837
+Epoch 22/25
+17/17 [==============================] - 5s 302ms/step - loss: 0.4942 - accuracy: 0.8641
+Epoch 23/25
+17/17 [==============================] - 5s 302ms/step - loss: 0.3534 - accuracy: 0.9091
+Epoch 24/25
+17/17 [==============================] - 5s 303ms/step - loss: 0.5549 - accuracy: 0.8422
+Epoch 25/25
+17/17 [==============================] - 5s 302ms/step - loss: 0.4353 - accuracy: 0.8797
+```
 
 
