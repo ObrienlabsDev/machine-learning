@@ -598,6 +598,24 @@ Epoch 25/25
 196/196 [==============================] - 55s 282ms/step - loss: 0.9450 - accuracy: 0.7366
 
 
+4096 batch - 25 epoch
+
+4090 single
+139ms
+
+4090 dual
+108ms
+
+A4500 single
+491ms
+
+A4500 dual NVlink
+372ms
+
+A6000
+362ms
+
+
 ```
 
 
