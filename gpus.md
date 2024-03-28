@@ -1,6 +1,7 @@
 ## NVidia GA102: RTX-4900
 ## NVidia GA102: A6000
 
+<img width="382" alt="Screenshot 2024-03-28 at 17 57 11" src="https://github.com/ObrienlabsDev/machine-learning/assets/24765473/39d25097-2125-4329-8745-07d968da89e0">
 
 
 ```
