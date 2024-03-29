@@ -17,11 +17,11 @@
 524ms 90c 209w 98-90%
 
 ### GA104 NVidia A4000 Ampere 256bit 448GB/s 16G PCIe 16x - 6144 cores
-778ms 90c 140w 92-70%
+778ms 92c 140w 92-70%
 
 ### AD104 NVidia 3500 Ada Mobile 192bit 432GB/s 12G - 5120 cores
 552ms 110c 96w 100%
 
 ### TU104 NVidia RTX-5000 Mobile 256bit 448GB/s 16G PCIe 3.0 16x - 3072 cores
-
-### A NVidia P1000 Pascal 4G - cores
+990ms 118w 99-92%
+### GP107 NVidia P1000 Pascal 4G - cores
