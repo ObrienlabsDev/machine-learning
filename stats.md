@@ -9,18 +9,19 @@
 ### GA102 NVidia A6000 Ampere 384bit 768GB/s 48G PCIe 16x - 10752 cores
 390ms 100c tt 308w 100-90%
 
-### NVidia A4500 Ampere Dual 40G NVLink - 7160 cores
+### GA102 NVidia A4500 Ampere Dual 320bit 640GB/s 40G NVLink - 14336 cores
 381ms 90c 400w 97-57%
 
-### NVidia A4500 Ampere 20G PCIe 8x - 7160 cores
+### GA102 NVidia A4500 Ampere 320bit 640GB/s 20G PCIe 8x - 7168 cores
 511ms 90c 205w 99-92%
 524ms 90c 209w 98-90%
 
 ### GA104 NVidia A4000 Ampere 256bit 448GB/s 16G PCIe 16x - 6144 cores
+778ms 90c 140w 92-70%
 
 ### AD104 NVidia 3500 Ada Mobile 192bit 432GB/s 12G - 5120 cores
 552ms 110c 96w 100%
 
-### NVidia 5000  Mobile 16G PCIe 3.0 16x - 3072 cores
+### TU104 NVidia RTX-5000 Mobile 256bit 448GB/s 16G PCIe 3.0 16x - 3072 cores
 
 ### A NVidia P1000 Pascal 4G - cores
