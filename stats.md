@@ -7,8 +7,9 @@
 137ms 66c 360w 97-93%
 
 ### GA102 NVidia A6000 Ampere 384bit 768GB/s 48G PCIe 16x - 10752 cores
-390ms 100c tt 308w 100-90%
-
+- The motherboard will affect the performance of an A6000 with up to 30% performance degradation - making an A6000 behave like an A4500
+- 390ms 100c tt 308w 100-90% on 790 maximus with full power availablity 1600w psu
+- 510ms 92c 280w 92-70% - on 790 hero with lower power availability 1500w psu
 ### GA102 NVidia A4500 Ampere Dual 320bit 640GB/s 40G NVLink - 14336 cores
 381ms 90c 400w 97-57%
 
