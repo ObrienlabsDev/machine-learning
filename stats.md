@@ -17,6 +17,9 @@
 511ms 90c 205w 99-92%
 524ms 90c 209w 98-90%
 
+### GA102 NVidia A4500 Ampere 320bit 640GB/s 20G PCIe 16x - 7168 cores
+505ms 90c 205w 99-96%
+
 ### GA104 NVidia A4000 Ampere 256bit 448GB/s 16G PCIe 16x - 6144 cores
 778ms 92c 140w 92-70%
 
