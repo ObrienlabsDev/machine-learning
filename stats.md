@@ -38,3 +38,15 @@
 ### TU104 NVidia RTX-5000 Mobile 256bit 448GB/s 16G PCIe 3.0 16x - 3072 cores
 990ms 118w 99-92%
 ### GP107 NVidia P1000 Pascal 4G - cores
+
+
+### M1Max Macbook Pro
+```
+strategy = tf.distribute.OneDeviceStrategy(device="/gpu")
+```
+941ms 62% GPU
+
+```
+strategy = tf.distribute.OneDeviceStrategy(device="/cpu")
+```
+450% CPU
