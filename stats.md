@@ -7,20 +7,24 @@
 137ms 66c 360w 97-93%
 
 ### GA102 NVidia A4500 Ampere Dual 320bit 640GB/s PCIe x8 40G NVLink - 14336 cores
-381ms 90c 400w 97-57% 
-372ms on 13900KS
+- 20% faster than a single A6000
+- 38% faster than a single A4500
+- 381ms 90c 400w 97-57% 
+- 372ms on 13900KS
+- 608ms for batch 8192
 
 ### GA102 NVidia A6000 Ampere 384bit 768GB/s 48G PCIe x16 - 10752 cores
 - The motherboard will affect the performance of an A6000 with up to 30% performance degradation - making an A6000 behave like an A4500
 - 390ms 100c tt 308w 100-90% on 790 maximus with full power availablity 1600w psu
 - 510ms 92c 280w 92-70% - on 790 hero with lower power availability 1500w psu
-- 388ms on 14900k
-  
+- 388ms-397ms on 14900k
+- 757ms for batch 8192
 
 ### GA102 NVidia A4500 Ampere 320bit 640GB/s 20G PCIe x8 - 7168 cores
-511ms 90c 205w 99-92%
-524ms 90c 209w 98-90%
-512ms 13900KS
+- 511ms 90c 205w 99-92%
+- 524ms 90c 209w 98-90%
+- 512ms 13900KS
+- 989ms for batch 8192
 
 ### GA102 NVidia A4500 Ampere 320bit 640GB/s 20G PCIe 16x - 7168 cores
 505ms 90c 205w 99-96%
