@@ -49,4 +49,4 @@ strategy = tf.distribute.OneDeviceStrategy(device="/gpu")
 ```
 strategy = tf.distribute.OneDeviceStrategy(device="/cpu")
 ```
-450% CPU
+12500ms 450% CPU
