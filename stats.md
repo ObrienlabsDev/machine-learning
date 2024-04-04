@@ -41,12 +41,13 @@
 
 
 ### M1Max Macbook Pro
+32 core GPU is 8x faster than CPU 
 ```
 strategy = tf.distribute.OneDeviceStrategy(device="/gpu")
 ```
-4500ms 52% GPU
+47000ms 80% GPU
 
 ```
 strategy = tf.distribute.OneDeviceStrategy(device="/cpu")
 ```
-12500ms 450% CPU
+24000ms 450% CPU
