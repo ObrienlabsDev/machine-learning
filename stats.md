@@ -44,7 +44,7 @@
 ```
 strategy = tf.distribute.OneDeviceStrategy(device="/gpu")
 ```
-941ms 62% GPU
+4500ms 52% GPU
 
 ```
 strategy = tf.distribute.OneDeviceStrategy(device="/cpu")
