@@ -1,6 +1,9 @@
 # machine-learning
 Machine Learning - AI - Tensorflow - Keras - NVidia - Google
 
+## 20240627: Google Gemma 2 - 27B 120G model
+- https://github.com/ObrienlabsDev/machine-learning/issues/27
+
 # Environments
 
 ## RTX-4090 Suprim Dual
