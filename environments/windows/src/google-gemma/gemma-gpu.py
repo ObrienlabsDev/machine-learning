@@ -9,11 +9,12 @@ from datetime import datetime
 
 access_token='hf....CQqH'
 
-model = "google/gemma-7b"
+#model = "google/gemma-7b"
+model = "google/gemma-2-27b"
 tokenizer = AutoTokenizer.from_pretrained(model, token=access_token)
 # GPU
 model = AutoModelForCausalLM.from_pretrained(model, device_map="auto", token=access_token)
-# CPUi
+# CPU
 #model = AutoModelForCausalLM.from_pretrained(model,token=access_token)
 
 input_text = "how is gold made in collapsing neutron stars - specifically what is the ratio created during the beta and r process."
