@@ -93,6 +93,9 @@ Epoch 1/40
 ```
 
 ## RTX-3500 ADA in Lenovo P1 Gen 6 - 2023
+```
+use "google/gemma-2b"
+```
 
 ## Google Cloud - Dual L4 GPU VM
 ### TensforFlow / Keras test ML training run
