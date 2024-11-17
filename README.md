@@ -1,6 +1,9 @@
 # machine-learning
 Machine Learning - AI - Tensorflow - Keras - NVidia - Google
 
+# Tensorflow on Apple Silicon - Metal
+- https://developer.apple.com/metal/tensorflow-plugin/
+
 ## 20240627: Google Gemma 2 - 27B 120G model
 - https://github.com/ObrienlabsDev/machine-learning/issues/27
 
