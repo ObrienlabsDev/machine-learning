@@ -1,6 +1,10 @@
 # machine-learning
 Machine Learning - AI - Tensorflow - Keras - NVidia - Google
 
+Batch Size variations among GPUs (shorter time per iteration is better)
+<img width="856" alt="Screenshot 2024-12-01 at 12 04 48" src="https://github.com/user-attachments/assets/ef942510-5820-4ced-b351-7aa93564b972">
+
+
 # Tensorflow on Apple Silicon - Metal
 - https://developer.apple.com/metal/tensorflow-plugin/
 
