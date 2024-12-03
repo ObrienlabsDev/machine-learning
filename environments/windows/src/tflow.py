@@ -1,9 +1,12 @@
 import tensorflow as tf
-
 # 36 - optimize for OSX cpu (not gpu) parallelism
+import os
+# M4 Max
+os.environ["OMP_NUM_THREADS"] = "16"
+# M1 Max
 os.environ["OMP_NUM_THREADS"] = "10"
-tf.config.threading.set_inter_op_parallelism_threads(0)
-tf.config.threading.set_intra_op_parallelism_threads(0)
+tf.config.threading.set_inter_op_parallelism_threads(64)
+tf.config.threading.set_intra_op_parallelism_threads(64)
 
 #import keras
 #from keras.utils import multi_gpu_model
