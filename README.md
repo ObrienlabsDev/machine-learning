@@ -9,6 +9,9 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 # Tensorflow on Apple Silicon - Metal
 - https://developer.apple.com/metal/tensorflow-plugin/
 
+## 20250128: Deepseek-r1:70b 
+https://obrienlabs.medium.com/running-reasoning-llms-like-the-deepseek-r1-70b-43g-locally-for-private-offline-air-gapped-259fa437da8f
+
 ## 20240627: Google Gemma 2 - 27B 120G model
 - https://github.com/ObrienlabsDev/machine-learning/issues/27
 
