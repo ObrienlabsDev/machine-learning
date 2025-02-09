@@ -1,0 +1,14 @@
+# TensorFlow (CPU version); change to `tensorflow-gpu==x.x.x` for GPU support if needed
+tensorflow==2.14.0
+
+# Common numerical and data libraries
+numpy==1.23.5
+pandas==1.5.2
+scikit-learn==1.2.0
+
+# Visualization
+matplotlib==3.6.2
+
+# Optional: You can add more libraries specific to your project
+# e.g., for data visualization, advanced analytics, etc.
+# seaborn==0.12.1
