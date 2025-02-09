@@ -1,5 +1,16 @@
 # machine-learning
-Machine Learning - AI - Tensorflow - Keras - NVidia - Google
+Machine Learning - AI - Tensorflow - PyTorch - Keras - NVidia
+
+Batch Size variations among GPUs (shorter time per iteration is better)
+<img width="1087" alt="Screenshot 2024-12-01 at 13 07 48" src="https://github.com/user-attachments/assets/cd39beac-d29a-4707-948c-eb171f61a48b">
+
+<img width="1102" alt="Screenshot 2024-12-03 at 11 39 44" src="https://github.com/user-attachments/assets/28b3e38a-af3f-4eeb-ba01-66021957c98b">
+
+# Tensorflow on Apple Silicon - Metal
+- https://developer.apple.com/metal/tensorflow-plugin/
+
+## 20250128: Deepseek-r1:70b 
+https://obrienlabs.medium.com/running-reasoning-llms-like-the-deepseek-r1-70b-43g-locally-for-private-offline-air-gapped-259fa437da8f
 
 ## 20240627: Google Gemma 2 - 27B 120G model
 - https://github.com/ObrienlabsDev/machine-learning/issues/27
