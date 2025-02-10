@@ -9,6 +9,23 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 # Tensorflow on Apple Silicon - Metal
 - https://developer.apple.com/metal/tensorflow-plugin/
 
+## Installing tensorflow-metal
+```
+brew install pyenv
+pyenv install --list
+pyenv install 3.9.6
+pyenv global 3.9.6
+eval "$(pyenv init --path)"
+python --version
+vi ~/.bash_profile
+
+pip install -U transformers
+pip install -U torch
+pip install accelerate
+python -m pip install tensorflow
+python -m pip install tensorflow-metal
+```
+
 ## 20250128: Deepseek-r1:70b 
 https://obrienlabs.medium.com/running-reasoning-llms-like-the-deepseek-r1-70b-43g-locally-for-private-offline-air-gapped-259fa437da8f
 
