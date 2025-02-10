@@ -30,11 +30,12 @@ import os
 #WARNING:tensorflow:Some requested devices in `tf.distribute.Strategy` are not visible to TensorFlow: /replica:0/task:0/device:GPU:1,/replica:0/task:0/device:GPU:0
 #Number of devices: 2
 
-strategy = tf.distribute.OneDeviceStrategy(device="/gpu:0")
+#strategy = tf.distribute.OneDeviceStrategy(device="/gpu:0")
 
 #central_storage_strategy = tf.distribute.experimental.CentralStorageStrategy()
-#strategy = tf.distribute.MultiWorkerMirroredStrategy() # not in tf 1.5
-#print("mirrored_strategy: ",mirrored_strategy)
+# 20250210: distributed strategy
+strategy = tf.distribute.MultiWorkerMirroredStrategy() # not in tf 1.5
+print("mirrored_strategy: ", strategy)
 #strategy = tf.distribute.OneDeviceStrategy(device="/gpu:1")
 #mirrored_strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0","/gpu:1"],cross_device_ops=tf.contrib.distribute.AllReduceCrossDeviceOps(all_reduce_alg="hierarchical_copy"))
 #mirrored_strategy = tf.distribute.MirroredStrategy(devices= ["/gpu:0","/gpu:1"],cross_device_ops=tf.distribute.HierarchicalCopyAllReduce())
@@ -74,4 +75,4 @@ with strategy.scope():
   loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 # https://keras.io/api/models/model_training_apis/
   parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
-parallel_model.fit(x_train, y_train, epochs=25, batch_size=2048)#5120)#7168)#7168)
+parallel_model.fit(x_train, y_train, epochs=20, batch_size=2048)#5120)#7168)#7168)
