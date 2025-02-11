@@ -7,7 +7,7 @@ def mnist_dataset(batch_size):
   # The `x` arrays are in uint8 and have values in the [0, 255] range.
   # You need to convert them to float32 with values in the [0, 1] range.
   x_train = x_train / np.float32(255)
-  y_train = y_train.astype(np.int64)
+  y_train = y_train.astype(np.int32)
   train_dataset = tf.data.Dataset.from_tensor_slices(
       (x_train, y_train)).shuffle(60000).repeat().batch(batch_size)
   return train_dataset
