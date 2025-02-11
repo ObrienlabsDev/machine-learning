@@ -69,6 +69,11 @@ print("mirrored_strategy: ", strategy)
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 
+# fix epsilon
+tf.keras.set_floatx('float64')
+eps = tf.keras.epsilon()
+print(eps)
+
 with strategy.scope():
 # https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50
 # https://keras.io/api/models/model/
