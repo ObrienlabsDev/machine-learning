@@ -75,4 +75,4 @@ with strategy.scope():
   loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 # https://keras.io/api/models/model_training_apis/
   parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
-parallel_model.fit(x_train, y_train)#, epochs=20, batch_size=512)#5120)#7168)#7168)
+parallel_model.fit(x_train, y_train, epochs=20, steps_per_epoch=70, batch_size=512)#5120)#7168)#7168)
