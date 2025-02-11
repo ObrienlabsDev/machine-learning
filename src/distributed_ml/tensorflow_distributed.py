@@ -35,15 +35,7 @@ import os
 #central_storage_strategy = tf.distribute.experimental.CentralStorageStrategy()
 # 20250210: distributed strategy
 strategy = tf.distribute.MultiWorkerMirroredStrategy() # not in tf 1.5
-print("mirrored_strategy: ", strategy)
-
-#export TF_CONFIG='{
-#  "cluster": {
-#    "worker": ["169.254.135.233:12345", "169.254.79.20:23456"]
-#  },
-#  "task": {"type": "worker", "index": 0}
-#}'
-
+print("mirrored_strategy: ",strategy)
 #strategy = tf.distribute.OneDeviceStrategy(device="/gpu:1")
 #mirrored_strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0","/gpu:1"],cross_device_ops=tf.contrib.distribute.AllReduceCrossDeviceOps(all_reduce_alg="hierarchical_copy"))
 #mirrored_strategy = tf.distribute.MirroredStrategy(devices= ["/gpu:0","/gpu:1"],cross_device_ops=tf.distribute.HierarchicalCopyAllReduce())
@@ -69,11 +61,6 @@ print("mirrored_strategy: ", strategy)
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 
-# fix epsilon
-tf.keras.backend.set_floatx('float64')
-eps = tf.keras.backend.epsilon()
-print(eps)
-
 with strategy.scope():
 # https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50
 # https://keras.io/api/models/model/
@@ -88,4 +75,4 @@ with strategy.scope():
   loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 # https://keras.io/api/models/model_training_apis/
   parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
-parallel_model.fit(x_train, y_train, epochs=20, batch_size=2048)#5120)#7168)#7168)
+parallel_model.fit(x_train, y_train)#, epochs=20, batch_size=512)#5120)#7168)#7168)
