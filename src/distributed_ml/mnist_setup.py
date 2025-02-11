@@ -14,8 +14,8 @@ def mnist_dataset(batch_size):
 
 def build_and_compile_cnn_model():
   model = tf.keras.Sequential([
-      tf.keras.layers.InputLayer(input_shape=(28, 28), dtype=tf.float32),
-      tf.keras.layers.Reshape(target_shape=(28, 28, 1), dtype=tf.float32),
+      tf.keras.layers.InputLayer(input_shape=(28, 28)),
+      tf.keras.layers.Reshape(target_shape=(28, 28, 1)),# dtype=tf.float32),
       tf.keras.layers.Conv2D(32, 3, activation='relu'),
       tf.keras.layers.Flatten(),
       tf.keras.layers.Dense(128, activation='relu'),
