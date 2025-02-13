@@ -9,6 +9,9 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 # Tensorflow on Apple Silicon - Metal
 - https://developer.apple.com/metal/tensorflow-plugin/
 
+<img width="1420" alt="Screenshot 2025-02-12 at 21 49 58" src="https://github.com/user-attachments/assets/bf3867f5-d7bb-443c-a706-b4c1f93a1309" />
+
+
 ## Installing tensorflow-metal
 ```
 brew install pyenv
