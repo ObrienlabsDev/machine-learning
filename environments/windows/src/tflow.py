@@ -3,12 +3,15 @@ import tensorflow as tf
 #print(tf.__version__)
 # 36 - optimize for OSX cpu (not gpu) parallelism
 import os
+# M2 Ultra
+#os.environ["OMP_NUM_THREADS"] = "24"
 # M4 Max
-os.environ["OMP_NUM_THREADS"] = "16"
+#os.environ["OMP_NUM_THREADS"] = "16"
 # M1 Max
-os.environ["OMP_NUM_THREADS"] = "10"
-tf.config.threading.set_inter_op_parallelism_threads(64)
-tf.config.threading.set_intra_op_parallelism_threads(64)
+#os.environ["OMP_NUM_THREADS"] = "10"
+#tf.config.threading.set_inter_op_parallelism_threads(64)
+#tf.config.threading.set_intra_op_parallelism_threads(64)
+# above slows down some machines like the m2 ultra
 
 import keras
 #from keras.utils import multi_gpu_model
@@ -59,6 +62,10 @@ strategy = tf.distribute.OneDeviceStrategy(device="/gpu:0")
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 
+BATCH = 4096#7680
+EPOCHS = 25
+print(f"Batch: %d Epochs: %d" % (BATCH, EPOCHS) )
+
 with strategy.scope():
 # https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50
 # https://keras.io/api/models/model/
@@ -73,4 +80,4 @@ with strategy.scope():
   loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 # https://keras.io/api/models/model_training_apis/
   parallel_model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
-parallel_model.fit(x_train, y_train, epochs=25, batch_size=2048)#5120)#7168)#7168)
+parallel_model.fit(x_train, y_train, epochs=EPOCHS, batch_size=BATCH)#7168)#7168)
