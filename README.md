@@ -18,10 +18,10 @@ brew install pyenv
 pyenv install --list
 pyenv install 3.9.6
 pyenv global 3.9.6
-eval "$(pyenv init --path)"
 python --version
 vi ~/.bash_profile
-
+  add
+   eval "$(pyenv init --path)"
 pip install -U transformers
 pip install -U torch
 pip install accelerate
