@@ -36,6 +36,24 @@ strategy = tf.distribute.OneDeviceStrategy(device="/gpu:0")
 
 #central_storage_strategy = tf.distribute.experimental.CentralStorageStrategy()
 #strategy = tf.distribute.MultiWorkerMirroredStrategy() # not in tf 1.5
+
+# https://www.tensorflow.org/guide/distributed_training#multiworkermirroredstrategy
+# CommunicationImplementation.RING is RPC-based and supports both CPUs and GPUs.
+
+#os.environ["TF_CONFIG"] = json.dumps({
+#    "cluster": {
+#        "worker": ["192.168.0.129:4001", "192.168.0.131:4002"]#,
+#        #"ps": ["192.168.0.129:4003"]
+#    },
+#   "task": {"type": "worker", "index": 1}
+#})
+
+#communication_options = tf.distribute.experimental.CommunicationOptions(
+#    implementation=tf.distribute.experimental.CommunicationImplementation.NCCL)
+#strategy = tf.distribute.MultiWorkerMirroredStrategy(
+#    communication_options=communication_options)
+
+
 #print("mirrored_strategy: ",mirrored_strategy)
 #strategy = tf.distribute.OneDeviceStrategy(device="/gpu:1")
 #mirrored_strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0","/gpu:1"],cross_device_ops=tf.contrib.distribute.AllReduceCrossDeviceOps(all_reduce_alg="hierarchical_copy"))
