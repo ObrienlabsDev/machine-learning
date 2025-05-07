@@ -80,7 +80,7 @@ strategy = tf.distribute.OneDeviceStrategy(device="/gpu:0")
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 
-BATCH = 4096#7680
+BATCH = 2048#7680
 EPOCHS = 25
 print(f"Batch: %d Epochs: %d" % (BATCH, EPOCHS) )
 
