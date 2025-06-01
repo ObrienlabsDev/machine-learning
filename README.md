@@ -43,6 +43,11 @@ python -m pip install tensorflow-metal
 python -m pip install tensorflow
 ```
 
+Check tensorflow version
+```
+python3 -c 'import tensorflow as tf; print(tf.__version__)' 
+```
+
 ## 20250128: Deepseek-r1:70b 
 https://obrienlabs.medium.com/running-reasoning-llms-like-the-deepseek-r1-70b-43g-locally-for-private-offline-air-gapped-259fa437da8f
 
