@@ -25,8 +25,22 @@ vi ~/.bash_profile
 pip install -U transformers
 pip install -U torch
 pip install accelerate
-python -m pip install tensorflow
+# install tensorflow-metal first
 python -m pip install tensorflow-metal
+python -m pip install tensorflow
+
+```
+
+or via virtual envionment
+```
+python3 -m venv ~/venv/ml
+source ~/venv/ml/bin/activate
+pip3 install -U transformers
+pip3 install -U torch
+pip3 install -U accelerate
+# install tensorflow-metal first
+python -m pip install tensorflow-metal
+python -m pip install tensorflow
 ```
 
 ## 20250128: Deepseek-r1:70b 
