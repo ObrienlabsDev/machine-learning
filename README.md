@@ -48,6 +48,18 @@ Check tensorflow version
 python3 -c 'import tensorflow as tf; print(tf.__version__)' 
 ```
 
+downgrade tensorflow to 2.14 
+```
+ 1294  python3 -m venv venv-t214
+ 1295  source venv-t214/bin/activate
+ 1296  python --version
+ 1297  python -m pip install --upgrade pip
+ 1299  python -m pip install tensorflow==2.14 
+ 1302  python -m pip install numpy==1.24.3
+ 1303  python3 -c 'import tensorflow as tf; print(tf.__version__)' 
+
+```
+
 ## 20250128: Deepseek-r1:70b 
 https://obrienlabs.medium.com/running-reasoning-llms-like-the-deepseek-r1-70b-43g-locally-for-private-offline-air-gapped-259fa437da8f
 
