@@ -1,5 +1,12 @@
+
 # machine-learning
 Machine Learning - AI - Tensorflow - PyTorch - Keras - NVidia
+
+see
+- https://arxiv.org/abs/1706.03762
+- see https://github.com/ObrienlabsDev/foundation-transformer-llm
+- see https://github.com/ObrienlabsDev/doppler-radar-ml
+- see https://github.com/ObrienlabsDev/machine-learning/issues/5
 
 Batch Size variations among GPUs (shorter time per iteration is better)
 <img width="1087" alt="Screenshot 2024-12-01 at 13 07 48" src="https://github.com/user-attachments/assets/cd39beac-d29a-4707-948c-eb171f61a48b">
