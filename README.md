@@ -13,6 +13,11 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 
 ![image](https://github.com/user-attachments/assets/0ed5bee8-8531-4aa2-8b9e-5271a4814435)
 
+# Tensorflow on arm64 based NVIDIA DGX Spark - GB10
+- 20251109
+- https://github.com/ObrienlabsDev/machine-learning/issues/48
+
+- 
 
 # Tensorflow on Apple Silicon - Metal
 - https://developer.apple.com/metal/tensorflow-plugin/
