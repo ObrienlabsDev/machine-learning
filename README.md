@@ -13,7 +13,32 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 
 ![image](https://github.com/user-attachments/assets/0ed5bee8-8531-4aa2-8b9e-5271a4814435)
 
-# Tensorflow on arm64 based NVIDIA DGX Spark - GB10
+## PyTorch on arm64 based NVIDIA DGX Spark - GB10
+Working via docker #
+
+```
+## working via docker
+```
+(venv-t214) michael@spark-7d19:~/wse_github/ObrienlabsDev/machine-learning$ sudo docker pull nvcr.io/nvidia/pytorch:25.09-py3
+(venv-t214) michael@spark-7d19:~/wse_github/ObrienlabsDev/machine-learning$ sudo docker run --gpus all -it --rm --ipc=host nvcr.io/nvidia/pytorch:25.09-py3
+== PyTorch ==
+NVIDIA Release 25.09 (build 210907838)
+PyTorch Version 2.9.0a0+50eac81
+Container image Copyright (c) 2025, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+
+root@c8522e0e1502:/workspace# vi pytorch.py
+root@c8522e0e1502:/workspace# python pytorch.py 
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+cpus:  20
+Torch: 2.9.0a0+50eac811a6.nv25.09
+CUDA: 13.0
+GPU available: True
+GPU: NVIDIA GB10
+
+```
+## Tensorflow on arm64 based NVIDIA DGX Spark - GB10
 - 20251109
 - https://github.com/ObrienlabsDev/machine-learning/issues/48
 
