@@ -14,9 +14,8 @@ Batch Size variations among GPUs (shorter time per iteration is better)
 ![image](https://github.com/user-attachments/assets/0ed5bee8-8531-4aa2-8b9e-5271a4814435)
 
 ## PyTorch on arm64 based NVIDIA DGX Spark - GB10
-Working via docker #
+Working via docker 
 
-```
 ## working via docker
 ```
 (venv-t214) michael@spark-7d19:~/wse_github/ObrienlabsDev/machine-learning$ sudo docker pull nvcr.io/nvidia/pytorch:25.09-py3
