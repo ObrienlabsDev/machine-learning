@@ -27,6 +27,14 @@ Container image Copyright (c) 2025, NVIDIA CORPORATION & AFFILIATES. All rights 
 Copyright (c) 2014-2024 Facebook Inc.
 
 root@c8522e0e1502:/workspace# vi pytorch.py
+import torch
+import os
+print("cpus: ", os.cpu_count())
+print("Torch:", torch.__version__)
+print("CUDA:", torch.version.cuda)
+print("GPU available:", torch.cuda.is_available())
+print("GPU:", torch.cuda.get_device_name(0))
+
 root@c8522e0e1502:/workspace# python pytorch.py 
 /usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
