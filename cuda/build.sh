@@ -2,7 +2,7 @@
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 #export DOCKER_DEFAULT_PLATFORM=linux/arm64
 cd environments/windows
-docker build -t ml-tensorflow-arm .
+docker build -t ml-tensorflow-win .
 cd ../../
-docker run --rm --gpus all --name ml-tensorflow-win ml-tensorflow-arm
+docker run --rm --gpus all --name ml-tensorflow-win ml-tensorflow-win
 
