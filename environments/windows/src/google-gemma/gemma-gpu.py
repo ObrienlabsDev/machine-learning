@@ -21,8 +21,10 @@ input_text = "how is gold made in collapsing neutron stars - specifically what i
 time_start = datetime.now().strftime("%H:%M:%S")
 print("genarate start: ", datetime.now().strftime("%H:%M:%S"))
 
-# GPU
+# GPU NVIDIA
 input_ids = tokenizer(input_text, return_tensors="pt").to("cuda")
+# GPU Metal - Apple Silicon
+# input_ids = tokenizer(input_text, return_tensors="pt").to("mps")#"cuda")
 # CPU
 #input_ids = tokenizer(input_text, return_tensors="pt")
 outputs = model.generate(**input_ids, 
